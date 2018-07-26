@@ -6,7 +6,7 @@ public class MyJokes {
 
     private String[] jokesArr = new String[] {
             "If doctors were like software engineers, they would say things like \"Have you tried killing yourself and being reborn?\"",
-            "There are only 10 types of people in the world: those that understand binary and those that don’t.",
+            "There are only 10 types of people in the world: those that understand binary and those that don't.",
             "CAPS LOCK - Preventing Login Since 1980.",
             "Artificial intelligence usually beats real stupidity.",
             "Computers make very fast, very accurate mistakes."
