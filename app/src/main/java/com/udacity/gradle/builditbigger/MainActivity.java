@@ -56,13 +56,6 @@ public class MainActivity extends AppCompatActivity implements EndpointsAsyncTas
         return super.onOptionsItemSelected(item);
     }
 
-    //as per step 1 getting joke from java library
-    public void tellJokeJavaLib(View view) {
-        MyJokes frogJoke = new MyJokes();
-        String jokeString = frogJoke.tellJoke();
-        Toast.makeText(this, jokeString, Toast.LENGTH_LONG).show();
-    }
-
     public void tellJokeAndroidLib(View view) {
 
         mProgressBar.setVisibility(View.VISIBLE);

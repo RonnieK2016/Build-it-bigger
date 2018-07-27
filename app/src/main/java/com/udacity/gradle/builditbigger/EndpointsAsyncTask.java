@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -23,6 +24,7 @@ import java.io.IOException;
 public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
     private MyApi myApiService = null;
     private AsyncTaskCallBack mCallBack;
+    private static final String TAG = EndpointsAsyncTask.class.getSimpleName();
 
     public EndpointsAsyncTask() {
     }
@@ -51,7 +53,8 @@ public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
         try {
             return myApiService.tellJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.e(TAG, "IOException when getting joke ", e);
+            return null;
         }
     }
 
